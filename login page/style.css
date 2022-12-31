@@ -18,3 +18,21 @@ body{
 .login i{
 font-size: 50px;
 }
+
+@media (max-width:767px) {
+    .login_box{
+        width: 70% !important;
+    }    
+}
+@media (max-width:767px) {
+    .login_box{
+        width: 70% !important;
+    }    
+}@media (max-width:505px) {
+    .login_box{
+        width: 85% !important;
+    }    
+    .forgot_pass{
+        font-size: 13px !important;
+    }
+}
