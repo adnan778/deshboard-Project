@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="deshboardStyle.css">
+    <title>Deshbored</title>
+</head>
+
+<body>
+    <div class="w-full flex">
+        <!-- sidebar code -->
+        <div class="w-1/5 h-auto">
+            <div class="w-full h-12 bg-black">
+                <img src="img/logo.png" class="w-28 h-auto m-auto" alt="">
+            </div>
+            <div class="w-full bg-gray-100">
+                <ul class="p-4 flex flex-col gap-2">
+                    <li class=" text-md font-medium mt-4 text-gray-500"><i class="fa-solid fa-rocket-launch pr-2"></i>
+                        <span class="">Dashboard</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-sharp fa-solid fa-cart-shopping pr-4"></i><span id="Mainli">Wholesale</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-sharp fa-solid fa-cart-shopping pr-4"></i><span id="Mainli">Retail</span> </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-sharp fa-solid fa-cart-shopping pr-4"></i><span id="Mainli">Purchase/Sales
+                            Return</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-sharp fa-solid fa-cart-shopping pr-4"></i><span class="Mainli">Products</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i class="fa-regular fa-folder pr-4"></i> <span
+                            class="Mainli">USERS</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-regular fa-paper-plane pr-4"></i><span class="Mainli">Account Settings</span>
+
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-regular fa-paper-plane pr-4"></i><span class="Mainli">Stocks</span> </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i class="fa fa-barcode menu-icon pr-4"></i>
+                        <span class="Mainli">Barcode</span>
+                    </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-regular fa-paper-plane pr-4"></i><span class="Mainli">Sattings</span> </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-regular fa-paper-plane pr-4"></i><span class="Mainli">Account Reports</span> </li>
+                    <li class=" text-md font-normal mt-4 text-gray-500"><i
+                            class="fa-regular fa-paper-plane pr-4"></i><span class="Mainli">Reports</span> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- main container code  -->
+        <div class="w-4/5">
+            <!-- nav bar for main container -->
+            <nav class="flex bg-blue-400 p-2 relative">
+                <i class="fa-solid fa-bars text-2xl text-white px-4" onclick="sidebarhidden()"></i>
+
+                <span class="ml-auto px-4">User name <i class="fa-solid fa-chevron-down downicon "
+                        onclick="signOut()"></i>
+                    <i class="fa-solid fa-chevron-up downiconUp hDisplay" onclick="iconUp()"></i></span>
+
+
+
+                <!-- sign out div  -->
+                <div class="absolute w-36 h-36 top-12 right-6 shadow-lg signoutDiv H_signout">
+                    <div class="w-full bg-blue-400 p-4 hover:bg-gray-100">
+                        <div class="rounded-full w-4/5 m-auto flex item-center justify-center bg-gray-400">
+                            <i class="fa-solid fa-user flex item-center justify-center p-4 text-white"
+                                style="font-size: 50px;"></i>
+                        </div>
+                    </div>
+                    <div class=" bg-blue-400 py-2 flex gap-2 item-center justify-center"
+                        style="border-top: 2px solid white;">
+                        <span class="py-1 text-base cursor-pointer"> <i
+                                class="fa-solid fa-arrow-right-from-bracket text-gray-700"></i>
+                            Sign
+                            out</span>
+                    </div>
+                </div>
+
+            </nav>
+            <!-- main data container 
+             -->
+            <div class="w-full h-auto bg-gray-100 p-4">
+                <div class="w-full h-auto">
+                    <h3 class="text-3xl p-2 text-gray-600">Daily Reports</h3>
+                    <div class="w-full flex flex-col">
+                        <div class="lg:w-96 w-72 m-2 p-4 bg-white flex item-center justify-center flex-wrap rounded-md">
+                            <i class="fa-solid fa-user-check text-green-300" style="font-size:70px;"></i>
+                        </div>
+                        <div class="lg:w-96 w-72 m-2 p-4 bg-white flex item-center justify-center flex-wrap rounded-md">
+                            <i class="fa-solid fa-user-check text-green-300" style="font-size:70px;"></i>
+                        </div>
+                        <div class="lg:w-96 w-72 m-2 p-4 bg-white flex item-center justify-center flex-wrap rounded-md">
+                            <i class="fa-solid fa-user-check text-green-300" style="font-size:70px;"></i>
+                        </div>
+                        <div class="lg:w-96 w-72 m-2 p-4 bg-white flex item-center justify-center flex-wrap rounded-md">
+                            <i class="fa-solid fa-user-check text-green-300" style="font-size:70px;"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="deshboard.js"></script>
+
+</html>
