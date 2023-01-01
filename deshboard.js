@@ -1,3 +1,4 @@
+// signout code
 function signOut() {
   const signoutContainer = document.querySelector(".signoutDiv");
   signoutContainer.classList.add("V_signout");
@@ -16,7 +17,44 @@ function iconUp() {
   const hiddenarrowIcon2 = document.querySelector(".downiconUp");
   hiddenarrowIcon2.classList.add("hDisplay");
 }
-function sidebarhidden() {
-  const x = document.querySelector(".Mainli");
-  x.classList.add("hidenLiText");
+//  end code of signOut div
+
+// code for sidebar
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector(".CloseSide");
+let searchBtn = document.querySelector(".bx-search");
+
+sidebar.classList.toggle("open");
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
+
+searchBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
+function menuBtnChange() {
+  if (sidebar.classList.contains("open")) {
+    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+    document.getElementById(
+      "p1"
+    ).innerHTML = `<img src="img/logo.png" class="w-28 h-auto mx-8" alt="">`;
+    const newlogoremove = document.querySelector(".logo_name");
+    newlogoremove.classList.remove("new_logo");
+  } else {
+    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    document.getElementById(
+      "p1"
+    ).innerHTML = `<img src="img/logo-mini.png" class="w-28 h-auto m-auto px-4" alt="">`;
+    const newlogo = document.querySelector(".logo_name");
+    newlogo.classList.add("new_logo");
+  }
 }
+function sidebarRemove() {
+  document.querySelector(".sidebar_hidden").style.display = "none";
+}
+function show_min_sidebar() {
+  document.querySelector(".sidebar_hidden").style.display = "inline";
+}
+// end code of sidebar

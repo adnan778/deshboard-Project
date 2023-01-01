@@ -13,3 +13,262 @@
 .hidenLiText{
     display: none;
 }
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  left: 0;
+  top: 0;
+  height:auto;
+  width: 78px;
+  background:#fff;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+
+.sidebar i{
+  color: rgb(66, 66, 66);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 2px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100%);
+  z-index: 3;
+  background: rgb(244, 244, 244);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+}
+.sidebar li a:hover{
+  background: rgb(207, 207, 207);
+}
+.sidebar li a .links_name{
+  color: rgb(28, 27, 27);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #383838;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.home-section{
+    position: relative;
+    background: #E4E9F7;
+    min-height: 100vh;
+    top: 0;
+    left:0;
+    width: calc(100% - 40px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .sidebar.open ~ .home-section{
+    left:0;
+    width: calc(100% - 250px);
+  }
+  .MinWidthBar{
+    display: none;
+  }
+  .sidebar_hidden{
+    display: none;
+  }
+
+
+  /* min width sidebar css  */
+  .sidebar_hidden{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:auto;
+    width: 270px;
+    background:#fff;
+    z-index: 99;
+    transition: all 0.5s ease;
+  }
+  
+  .sidebar_hidden .logo-details{
+    height: 48px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .sidebar_hidden .logo-details .icon{
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar_hidden .logo-details .logo_name{
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+ 
+  
+  .sidebar_hidden i{
+    color: rgb(66, 66, 66);
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+  }
+  .sidebar_hidden .nav-list{
+    margin-top: 20px;
+    height: 100%;
+  }
+  .sidebar_hidden li{
+    position: relative;
+    margin: 2px 0;
+    list-style: none;
+  }
+  .sidebar_hidden li .tooltip{
+    position: absolute;
+    top: -20px;
+    left: calc(100%);
+    z-index: 3;
+    background: rgb(244, 244, 244);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+  }
+  .sidebar_hidden li:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+  .sidebar_hidden li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #ffffff;
+  }
+  .sidebar_hidden li a:hover{
+    background: rgb(207, 207, 207);
+  }
+  .sidebar_hidden li a .links_name{
+    color: rgb(28, 27, 27);
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.4s;
+  }
+ 
+  .sidebar_hidden li a:hover .links_name,
+  .sidebar_hidden li a:hover i{
+    transition: all 0.5s ease;
+    color: #383838;
+  }
+  .sidebar_hidden li i{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+@media (max-width:768px) {
+    .sidebar{
+        display: none;
+    }
+    .CloseSide{
+      display: none;
+    }
+    .MinWidthBar{
+      display: inline;
+    }
+    .home-section{
+  
+      width:100% !important;
+    }
+   
+}
