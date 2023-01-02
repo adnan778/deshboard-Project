@@ -24,7 +24,7 @@
 .sidebar{
   left: 0;
   top: 0;
-  height:auto;
+  height:100%;
   width: 60px;
   background:#fff;
   z-index: 99;
