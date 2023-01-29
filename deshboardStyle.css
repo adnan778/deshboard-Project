@@ -186,3 +186,9 @@
     font-size: 25px !important;
   }
 }
+@media (max-width:499px) {
+  .search_div{display: none !important;}
+}
+ input:focus{
+  outline: none;
+}

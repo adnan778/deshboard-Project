@@ -1,22 +1,18 @@
 body{
-   background-color: rgba(184, 233, 234, 0.933);
-    
+   background-color: rgb(231 231 231 / 93%);
 }
 
 
 .login_box {
     background-color: rgba(256, 256, 256, 0.4);
-    /*background-color: aliceblue;*/
 }
+
 .login_input{
     border-bottom: 2px solid rgb(46, 0, 82);
     background: transparent;
 }
 .login{
     font-weight: bolder !important;
-}
-.login i{
-font-size: 50px;
 }
 
 @media (max-width:767px) {
@@ -36,3 +32,6 @@ font-size: 50px;
         font-size: 13px !important;
     }
 }
+input:focus{
+    outline: none;
+  }

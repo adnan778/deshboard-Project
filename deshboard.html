@@ -16,10 +16,10 @@
 <body>
     <div class="w-full flex">
 
-        <div class="sidebar left-0 top-0 h-full bg-white ">
+        <div class="sidebar left-0 top-0 h-full bg-white shadow-lg">
             <div class="logo-details bg-black flex item-center relative h-12">
 
-                <div class="logo_name" id="p1"> <img src="img/logo.png" class="w-28 h-auto mx-8" alt=""></div>
+                <div class="logo_name" id="p1"> <img src="img/logo.png" class="w-36 h-auto mx-12" alt=""></div>
 
             </div>
             <ul class="nav-list">
@@ -305,41 +305,59 @@
         <!-- main container code  -->
         <div class="home-section relative bg-gray-50 top-0 left-0 ">
             <!-- nav bar for main container -->
-            <nav class="flex bg-blue-400 p-2 relative">
-                <i class="fa-solid fa-bars text-2xl text-white px-4 CloseSide"></i>
+            <nav class="flex bg-gray-50 p-2 relative drop-shadow-xl">
+                <i class="fa-solid fa-bars text-2xl text-white px-4 CloseSide text-gray-600 cursor-pointer"></i>
                 <i class="fa-solid fa-bars text-2xl text-white px-4 MinWidthBar" onclick="show_min_sidebar()"></i>
 
-                <span class="ml-auto px-4">User name <i class="fa-solid fa-chevron-down downicon "
-                        onclick="signOut()"></i>
-                    <i class="fa-solid fa-chevron-up downiconUp hDisplay" onclick="iconUp()"></i></span>
-
+                <div class="flex ml-4 search_div">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass text-gray-600 mx-1 mt-2 cursor-pointer"></i>
+                    <input type="text" class="placeholder:italic placeholder:text-gray-600 px-4"
+                        style="background: transparent;" placeholder="search for something.....">
+                </div>
+                <div class="ml-auto px-4 flex"><img src="img/0.jpg" alt="img" class="w-8 h-8 rounded-full mx-2"><span
+                        class="text-sm mt-2 text-gray-600">
+                        Sierra Brooks <i class="fa-solid fa-chevron-down downicon text-rose-800"
+                            onclick="signOut()"></i>
+                        <i class="fa-solid fa-chevron-up downiconUp hDisplay text-rose-800" onclick="iconUp()"></i>
+                    </span>
+                </div>
 
 
                 <!-- sign out div  -->
-                <div class="absolute w-36 h-36 top-12 right-6 shadow-lg signoutDiv H_signout">
-                    <div class="w-full bg-blue-400 p-4 hover:bg-gray-100">
-                        <div class="rounded-full w-4/5 m-auto flex item-center justify-center bg-gray-400">
-                            <i class="fa-solid fa-user flex item-center justify-center p-4 text-white"
-                                style="font-size: 50px;"></i>
-                        </div>
+                <div class="absolute w-40 h-36 top-14 right-6 shadow-2xl signoutDiv H_signout drop-shadow-xl">
+                    <div class="w-full px-4 py-2 bg-white rounded-2xl ">
+                        <ul>
+                            <li class=" text-base py-2 ml-2 text-gray-600 cursor-pointer"><a
+                                    href="pages/profile.html">Profile</a> </li>
+                            <li class=" text-base py-2 ml-2 text-gray-600 cursor-pointer">Blog Post</li>
+                            <li class=" text-base py-2 ml-2 text-gray-600 cursor-pointer">Add New Post</li>
+                            <li class=" text-base py-2 pl-2 text-gray-600 cursor-pointer"
+                                style="border-top: 2px solid rgb(250, 179, 179);"><span
+                                    class="py-1 text-base cursor-pointer text-rose-800"> <a
+                                        href="./login page/login.html"><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        Log
+                                        out</span></a></li>
+                        </ul>
                     </div>
-                    <div class=" bg-blue-400 py-2 flex gap-2 item-center justify-center"
-                        style="border-top: 2px solid white;">
-                        <span class="py-1 text-base cursor-pointer"> <a href="./login page/login.html"><i
-                                    class="fa-solid fa-arrow-right-from-bracket text-gray-700"></i>
-                                Sign
-                                out</span></a>
-                    </div>
+                    <!-- <div class=" bg-rose-600 py-2 flex gap-2 item-center justify-center"
+                        >
+                        
+                    </div> -->
                 </div>
 
             </nav>
+            <!-- <div id="nav-placeholder">
+
+            </div> -->
+
 
             <div class="text-gray-600 body-font">
                 <div class="container px-5 py-6 mx-auto">
                     <h3 class="text-3xl p-2 text-gray-600 mb-4">Daily Reports</h3>
                     <div class="flex flex-wrap -m-4">
                         <div class="xl:w-1/4 md:w-1/2 p-2 w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"><i
+                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu shadow-lg"><i
                                     class="fa-solid fa-user-check text-green-300" style="font-size:50px;"></i>
                                 <div class="mx-2">
                                     <h5 class="md:text-lg text-sm">Sale</h5>
@@ -349,7 +367,7 @@
 
                         </div>
                         <div class="xl:w-1/4 md:w-1/2 p-2 w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"><i
+                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu shadow-lg"><i
                                     class="fa-solid fa-user-check text-green-300" style="font-size:50px;"></i>
                                 <div class="mx-2"">
                                     <h5 class=" md:text-lg text-sm">Collection</h5>
@@ -359,7 +377,7 @@
 
                         </div>
                         <div class=" xl:w-1/4 md:w-1/2 w-1/2 p-2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"> <i
+                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu shadow-lg"> <i
                                     class="fa-solid fa-user-check text-green-300" style="font-size:50px;"></i>
                                 <div class="mx-2">
                                     <h5 class="md:text-lg text-sm">Purchase</h5>
@@ -369,7 +387,7 @@
 
                         </div>
                         <div class="xl:w-1/4 md:w-1/2 p-2  w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu">
+                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu shadow-lg">
                                 <i class="fa-solid fa-user-check text-green-300" style="font-size:50px;"></i>
                                 <div class="mx-2">
                                     <h5 class="md:text-lg text-sm">Profit/loss</h5>
@@ -381,57 +399,45 @@
                     </div>
                 </div>
 
-                <div class="container px-5 py-6 mx-auto">
-                    <h3 class="text-3xl p-2 text-gray-600 mb-4">Products</h3>
-                    <div class="flex flex-wrap -m-4">
-                        <div class="xl:w-1/4 md:w-1/2 p-2 w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"><i
-                                    class="fa-solid fa-user-check text-green-300" style="font-size:50px;"></i>
-                                <div class="mx-2">
-                                    <h5 class="md:text-lg text-sm">Total Quantity
-                                    </h5>
-                                    <p> 4713</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="xl:w-1/4 md:w-1/2 p-2 w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"><i
-                                    class="fa-sharp fa-solid fa-credit-card text-green-300" style="font-size:50px;"></i>
-                                <div class="mx-2"">
-                                    <h5 class=" md:text-lg text-sm">Total Cost</h5>
-                                    <p class="text-sm"> 880806.4356435626</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="container px-5 py-6 mx-auto">
-
-                    <div class="flex flex-wrap -m-4">
-                        <div class="xl:w-1/4 md:w-1/2 p-2 w-1/2">
-                            <div class="md:m-2 m-1 bg-white rounded-md flex p-4 w-full deshboardSubManu"><i
-                                    class="fa-sharp fa-solid fa-credit-card text-green-300" style="font-size:50px;"></i>
-                                <div class="mx-2">
-                                    <h5 class="md:text-lg text-sm">Total Due
-                                    </h5>
-                                    <p> 32150</p>
-                                </div>
-                            </div>
-
-                        </div>
 
 
-                    </div>
-                </div>
+            </div>
+            <div class="full flex">
+
+                <div class="w-1/2 mx-4"><canvas id="myChart"></canvas></div>
+                <div class="w-1/2 mx-4"></div>
             </div>
         </div>
     </div>
 </body>
 <script src=" deshboard.js">
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 </script>
 
 </html>

@@ -39,7 +39,7 @@ function menuBtnChange() {
     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
     document.getElementById(
       "p1"
-    ).innerHTML = `<img src="img/logo.png" class="w-28 h-auto mx-8" alt="">`;
+    ).innerHTML = `<img src="img/logo.png" class="w-36 h-auto mx-12" alt="">`;
     const newlogoremove = document.querySelector(".logo_name");
     newlogoremove.classList.remove("new_logo");
   } else {
@@ -59,3 +59,5 @@ function show_min_sidebar() {
 }
 var adnan = "adnan";
 // end code of sidebar
+
+
